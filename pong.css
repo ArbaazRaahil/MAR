@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88;
+    font-weight: bold;
+}
+
+.game-wrapper {
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid #00ff88;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px #00ff88, inset 0 0 20px rgba(0, 255, 136, 0.1);
+    margin-bottom: 20px;
+}
+
+#pongCanvas {
+    display: block;
+    background: #000;
+    border: 2px solid #00ff88;
+    max-width: 100%;
+    height: auto;
+    cursor: none;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.score-container {
+    flex: 1;
+    padding: 10px;
+}
+
+.score-label {
+    font-size: 0.9rem;
+    color: #00ff88;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.score {
+    font-size: 3rem;
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88;
+}
+
+.vs {
+    color: #00ff88;
+    font-size: 1.2rem;
+    padding: 0 20px;
+}
+
+.controls {
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid #00ff88;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.controls h3 {
+    color: #00ff88;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.control-item {
+    margin: 5px 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #00ff88;
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px #00ff88;
+}
+
+button:hover {
+    background: rgba(0, 255, 136, 0.4);
+    box-shadow: 0 0 15px #00ff88;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #pongCanvas {
+        width: 100%;
+        max-height: 70vh;
+    }
+
+    .scoreboard {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .score {
+        font-size: 2.5rem;
+    }
+
+    .vs {
+        padding: 10px 0;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .controls {
+        font-size: 0.8rem;
+    }
+}
